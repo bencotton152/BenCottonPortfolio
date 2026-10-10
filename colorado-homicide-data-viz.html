@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Same Data, Two Stories · Benjamin Cotton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="../index.html">Ben<span>.</span>Cotton</a>
+    <ul>
+      <li><a class="link" href="../index.html#about">About</a></li>
+      <li><a class="link" href="../index.html#work">Work</a></li>
+      <li><a class="link" href="../index.html#resume">Resume</a></li>
+      <li><a class="link" href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <section class="detail-hero">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+      <a class="back" href="../index.html#work">← All projects</a>
+      <p class="slate"><span class="dot"></span>Data Visualization · Group project</p>
+      
+      <h1>Same Data, Two Stories</h1>
+      <p class="lede">How the exact same Colorado homicide data can tell two opposite stories, depending on the design choices behind the chart.</p>
+      <dl class="meta"><div><dt>Role</dt><dd>Designed the December spike chart</dd></div><div><dt>Team</dt><dd>Kaliya Sonoqui, Roxy Houck, Rogan Tinjum, Ben Cotton</dd></div><div><dt>Tools</dt><dd>Python, pandas, Altair</dd></div><div><dt>Data</dt><dd>~6,600 Colorado homicide records, 1980–2014</dd></div></dl>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Overview</h2></div>
+      <div>
+        <p>Our team started with a national dataset of more than 638,000 U.S. homicide records from 1980 to 2014 and filtered it to Colorado, leaving roughly 6,600 records. From that one dataset we built two honest charts and two deliberately misleading ones.</p>
+        <p>The truthful charts show that Colorado's unsolved homicide rate has fallen over time and compare solved rates across the ten counties with the most reports. The misleading charts use the same real numbers to falsely suggest that murders spike every December and that women are increasingly being targeted.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>My chart</h2></div>
+      <div>
+        <figure><div class="frame"><img src="../assets/img/viz-december.png" alt="Bar chart of total Colorado homicides by month with the y-axis starting at 400 and December highlighted in red-orange"></div>
+          <figcaption>"Colorado Murders Spike Every December": the misleading chart I designed</figcaption></figure>
+        <p>My first sketch isolated a single year where December happened to be unusually high. Once we added a title, it was too easy to notice we'd cherry-picked one year. So I switched to all-time monthly totals and used a truncated y-axis to make December look far more dramatic than it is.</p>
+        <div class="stats">
+          <div class="stat"><b>766</b><span>December incidents</span></div>
+          <div class="stat"><b>462</b><span>February incidents</span></div>
+          <div class="stat"><b>~1.66×</b><span>real difference</span></div>
+          <div class="stat"><b>400</b><span>where the y-axis starts, instead of 0</span></div>
+        </div>
+        <p>This deliberately breaks the q-ratio principle of graphical integrity: a bar's height should be proportional to its value. Starting the axis at 400 makes December's bar look several times taller than February's, when the real difference is about 1.66 times. Graying out every other month and coloring December alone pulls the eye straight to the "spike."</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>User testing</h2></div>
+      <div>
+        <p>I showed the chart to people before explaining the project. Everyone said December had the highest crime rate "by a landslide," which confirmed the deception worked at first glance. Their best suggestion was to gray out the other months even further so December would stand out more, which I used in the final version.</p>
+        <p>Once we explained the goal, the testers could quickly pick apart how the chart misled them. That's the point of the project: knowing these techniques makes it easier to spot them, and to avoid them in honest work.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Documents</h2></div>
+      <div><div class="docs"><article class="doc">
+          <header><strong>Project write-up: Are Colorado's Murders Really Getting Worse?</strong>
+            <div class="cta-row"><a class="btn" href="../assets/docs/colorado-homicide-data-viz.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="../assets/docs/colorado-homicide-data-viz.pdf" download>Download</a></div>
+          </header>
+          <iframe src="../assets/docs/colorado-homicide-data-viz.pdf#view=FitH" title="Project write-up: Are Colorado's Murders Really Getting Worse?" loading="lazy"></iframe>
+        </article></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap next"><a href="nba-team-dashboard.html"><span>← Previous</span><strong>NBA Team Dashboard</strong></a><a class="right" href="maddie-shoup-feature.html"><span>Next →</span><strong>Maddie Shoup Feature</strong></a></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="slate">© 2026 Benjamin Cotton</span>
+    <a class="slate" href="../index.html#contact">Contact →</a>
+  </div>
+</footer>
+</body>
+</html>

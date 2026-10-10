@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NFL Draft Trajectories · Benjamin Cotton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="../index.html">Ben<span>.</span>Cotton</a>
+    <ul>
+      <li><a class="link" href="../index.html#about">About</a></li>
+      <li><a class="link" href="../index.html#work">Work</a></li>
+      <li><a class="link" href="../index.html#resume">Resume</a></li>
+      <li><a class="link" href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <section class="detail-hero">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+      <a class="back" href="../index.html#work">← All projects</a>
+      <p class="slate"><span class="dot"></span>Data Analysis · Final project</p>
+      
+      <h1>NFL Draft Career Trajectories</h1>
+      <p class="lede">Do later-round picks catch up? Tracking how running backs, receivers, and tight ends develop over their first five NFL seasons, split by draft round.</p>
+      <dl class="meta"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Course</dt><dd>Data analytics final project</dd></div><div><dt>Tools</dt><dd>Python, pandas, SQLite, matplotlib</dd></div><div><dt>Date</dt><dd>April 2026</dd></div></dl>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>The question</h2></div>
+      <div>
+        <p><strong>How does on-field production change across the first five seasons of a skill-position player's NFL career, and does draft round predict how quickly a player develops, not just how much they produce?</strong></p>
+        <p>Teams justify high picks as a bet on long-term potential. If first-round picks produce more in year one but later picks close the gap by year three or four, teams may be paying for early production more than true career value. I expected first-round picks to dominate early, with the gap narrowing a lot by year three.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Data</h2></div>
+      <div>
+        <p>Three datasets from the nflverse project (Pro Football Reference data), joined on player ID:</p>
+        <ul class="points">
+          <li><strong>draft_picks:</strong> every pick since 1980, with round, pick, and position.</li>
+          <li><strong>advstats:</strong> season-level rushing and receiving stats, 2018 to present.</li>
+          <li><strong>combine:</strong> measurables like the 40-yard dash, weight, and vertical jump.</li>
+        </ul>
+        <p>No single table could answer the question. The draft table gives round, the stats table gives yearly production, and the combine table lets me test whether physical traits explain any of the development gap.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Process</h2></div>
+      <div>
+        <ul class="points">
+          <li>Logged known data issues (missing IDs, inconsistent position codes, implausible weights) and documented a decision for each.</li>
+          <li>Standardized 26 raw position codes into position groups, and set combine weights outside 150–400 lbs to null.</li>
+          <li>Built a derived <code>career_year</code> variable (stat season minus draft season, plus one) so every player is measured on the same timeline.</li>
+          <li>Loaded clean tables into SQLite and audited every join for cardinality and unmatched records before and after joining.</li>
+          <li>Compared production by round and by early versus late picks, computed year-over-year change, and split players by combine speed.</li>
+        </ul></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Findings</h2></div>
+      <div>
+        <figure><div class="frame"><img src="../assets/img/nfl-chart-2.png" alt="Line chart: average receiving yards by career year for rounds 1 through 4. Round 1 stays near 550 to 670 yards while rounds 3 and 4 stay below 360."></div>
+          <figcaption>Receiving-yard trajectory by draft round (RB, WR, TE drafted 2018+)</figcaption></figure>
+        <ul class="points">
+          <li><strong>The gap narrows, but less than I expected.</strong> Round 1 players averaged 650.7 receiving yards in year one versus 212.6 for round 3. By year three it was 672.4 versus 357.1, so the gap shrank from 438 to 315 yards.</li>
+          <li><strong>Round 2 develops most steadily.</strong> Round 2 players rose from 374.6 yards in year one to 450.8 in year two, while round 1 players dipped before recovering in year three.</li>
+          <li><strong>Speed predicts early production more than development.</strong> Players with sub-4.50 forty times out-gained slower players by about 129 yards in year one. By year three that edge was down to about 90.</li>
+        </ul>
+        <figure><div class="frame"><img src="../assets/img/nfl-chart-3.png" alt="Grouped bar chart comparing early-round and late-round average receiving yards for career years 1 through 5"></div>
+          <figcaption>Early (rounds 1–2) vs. late (rounds 3–7) receiving yards by career year</figcaption></figure>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Career year</th><th>Rounds 1–2 (avg yds)</th><th>Rounds 3–7 (avg yds)</th><th>Gap</th></tr></thead>
+          <tbody>
+            <tr><td>Year 1</td><td>489.3</td><td>162.4</td><td>326.9</td></tr>
+            <tr><td>Year 2</td><td>519.5</td><td>216.6</td><td>302.9</td></tr>
+            <tr><td>Year 3</td><td>522.1</td><td>256.3</td><td>265.8</td></tr>
+            <tr><td>Year 4</td><td>498.1</td><td>222.4</td><td>275.7</td></tr>
+            <tr><td>Year 5</td><td>470.1</td><td>263.9</td><td class="hl">206.2</td></tr>
+          </tbody></table></div>
+        <div class="callout"><p><strong>Limitations:</strong> stats only go back to 2018, so few players have five full seasons. Survival bias also matters: late-round picks still in the league by year three are the best of their tier, which makes the gap look like it closes more than it does for a typical late pick.</p></div></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Full notebook</h2></div>
+      <div><div class="docs"><article class="doc">
+          <header><strong>Final Project: NFL Draft Career Trajectory Analysis</strong>
+            <div class="cta-row"><a class="btn" href="../assets/docs/nfl-draft-trajectory-analysis.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="../assets/docs/nfl-draft-trajectory-analysis.pdf" download>Download</a></div>
+          </header>
+          <iframe src="../assets/docs/nfl-draft-trajectory-analysis.pdf#view=FitH" title="Final Project: NFL Draft Career Trajectory Analysis" loading="lazy"></iframe>
+        </article></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap next"><a href="strava-simplified.html"><span>← Previous</span><strong>Strava Simplified</strong></a><a class="right" href="nba-team-dashboard.html"><span>Next →</span><strong>NBA Team Dashboard</strong></a></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="slate">© 2026 Benjamin Cotton</span>
+    <a class="slate" href="../index.html#contact">Contact →</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Strava Simplified · Benjamin Cotton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="../index.html">Ben<span>.</span>Cotton</a>
+    <ul>
+      <li><a class="link" href="../index.html#about">About</a></li>
+      <li><a class="link" href="../index.html#work">Work</a></li>
+      <li><a class="link" href="../index.html#resume">Resume</a></li>
+      <li><a class="link" href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <section class="detail-hero">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+      <a class="back" href="../index.html#work">← All projects</a>
+      <p class="slate"><span class="dot"></span>UX/UI Design · Case study</p>
+      <span class="status">In progress</span>
+      <h1>Strava Simplified</h1>
+      <p class="lede">Redesigning the Strava app to cut through feature bloat, so the things athletes use every day are easy to find.</p>
+      <dl class="meta"><div><dt>Role</dt><dd>Solo: research &amp; design</dd></div><div><dt>Course</dt><dd>INFO 4609, user-centered design</dd></div><div><dt>Methods</dt><dd>Survey, interviews, competitive analysis</dd></div><div><dt>Status</dt><dd>In progress, Fall 2026</dd></div></dl>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>The problem</h2></div>
+      <div>
+        <p>Strava keeps adding features: route discovery, full-screen maps, live elevation data, more tools behind the paywall. Each one makes sense on its own, but together they've made the app harder to use. Existing critiques point to the same thing. The "You" section can be reached from two places on one screen, onboarding asks personal questions the interface never reflects, and community members complain about cluttered menus that bury features.</p>
+        <p>This is a classic case of interface bloat. My goal is to simplify Strava's UI so it's easier for new members to learn and faster for longtime members to use, without losing the range of uses that makes Strava worth opening.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Research</h2></div>
+      <div>
+        <p><strong>Competitive analysis.</strong> I compared Strava with Garmin Connect, which leans fully into training and recovery data, and Nike Run Club, which is friendly to new runners but limited in analytics and only tracks running. Strava sits in the middle, trying to serve everyone. Its clear strengths are its social features and segments.</p>
+        <p><strong>User survey.</strong> I surveyed 10 Strava users about how they use the app, which features they rely on, and what frustrates them.</p>
+        <div class="stats">
+          <div class="stat"><b>6.8</b><span>average satisfaction out of 10 (every rating was 6 to 8)</span></div>
+          <div class="stat"><b>8 / 10</b><span>use it for casual tracking, and 8 for social posting</span></div>
+          <div class="stat"><b>4 / 10</b><span>use it for structured training</span></div>
+          <div class="stat"><b>1–2</b><span>people used the route builder or clubs</span></div>
+        </div>
+        <p class="muted">Small sample that skews toward college students and runners, so these are patterns to explore rather than conclusions. One-on-one interviews are next to add depth.</p></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>What users said</h2></div>
+      <div>
+        <ul class="points">
+          <li><strong>Social is the favorite part.</strong> Seeing friends' activities and encouraging them came up most.</li>
+          <li><strong>The paywall is the biggest complaint.</strong> Users dislike seeing features like turn-by-turn route guidance and offline maps that turn out to be locked.</li>
+          <li><strong>Some features go unused.</strong> Groups and training plans were avoided. One person said training plans felt like suggested workout panels, not a plan they could track.</li>
+          <li><strong>The map screen overwhelms.</strong> One respondent never uses it because of how much information appears at once.</li>
+          <li><strong>Usability gaps.</strong> No live stats on the lock screen during a workout, and no direct path from an activity to someone's full profile.</li>
+        </ul></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Design direction</h2></div>
+      <div>
+        <p>These findings set the priorities for the redesign:</p>
+        <ul class="points">
+          <li>Make the social feed the center of the app, since it's the most used feature.</li>
+          <li>Move low-use features like groups, training plans, and route planning out of the primary navigation.</li>
+          <li>Clearly label what's free and what's behind the paywall.</li>
+          <li>Simplify the map so it doesn't overwhelm on first open.</li>
+          <li>Add lock screen access or a live stat view during workouts.</li>
+          <li>Link activity posts directly to full profiles.</li>
+        </ul>
+        <div class="callout"><p><strong>Up next:</strong> user interviews, then wireframes, interactive prototypes, and usability testing. This page will be updated as the redesign comes together.</p></div></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Documents</h2></div>
+      <div><div class="docs"><article class="doc">
+          <header><strong>Research Plan</strong>
+            <div class="cta-row"><a class="btn" href="../assets/docs/strava-research-plan.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="../assets/docs/strava-research-plan.pdf" download>Download</a></div>
+          </header>
+          <iframe src="../assets/docs/strava-research-plan.pdf#view=FitH" title="Research Plan" loading="lazy"></iframe>
+        </article><article class="doc">
+          <header><strong>Research Findings</strong>
+            <div class="cta-row"><a class="btn" href="../assets/docs/strava-research-findings.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="../assets/docs/strava-research-findings.pdf" download>Download</a></div>
+          </header>
+          <iframe src="../assets/docs/strava-research-findings.pdf#view=FitH" title="Research Findings" loading="lazy"></iframe>
+        </article></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap next"><a class="right" href="nfl-draft-trajectories.html"><span>Next →</span><strong>NFL Draft Trajectories</strong></a></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="slate">© 2026 Benjamin Cotton</span>
+    <a class="slate" href="../index.html#contact">Contact →</a>
+  </div>
+</footer>
+</body>
+</html>

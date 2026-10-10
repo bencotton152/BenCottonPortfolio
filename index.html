@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Benjamin Cotton</title>
+<meta name="description" content="Benjamin Cotton — Information Science student at CU Boulder working in UX/UI design, data analysis, and sports media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top">Ben<span>.</span>Cotton</a>
+    <ul>
+      <li><a class="link" href="#about">About</a></li>
+      <li><a class="link" href="#work">Work</a></li>
+      <li><a class="link" href="#resume">Resume</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+  <section class="hero" id="about">
+    <div class="wrap">
+      <div class="stack">
+        <div class="lower-third">
+          <span class="tag">Info Science</span>
+          <span class="txt">CU Boulder · Sports Media Minor · Class of 2027</span>
+        </div>
+        <h1>Benjamin<br>Cotton</h1>
+        <p class="lede">I design with data and help tell sports stories, from user research and dashboards to the camera crew on game day.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn" href="#resume">Resume</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="story">
+          <p class="slate"><span class="dot"></span>About me</p>
+          <p>I grew up in Denver, Colorado, and I've been around sports my whole life. Somewhere along the way I fell in love with the numbers behind the game. A box score, a shot chart, or a draft board can tell its own story if you know how to read it, and finding that story is what pulled me toward sports analytics.</p>
+          <p>The other half of that is broadcasting. Learning how a live game actually gets put together, from the people running cameras to the editor cutting a feature, has become a big part of my life. I've worked as a SkyCam utility operator on NFL broadcasts and run camera on a live ESPN+ game, and I want to keep building toward work where data and storytelling meet.</p>
+          <p>At CU Boulder I study Information Science, which lets me work on both sides: understanding the people who use a product, and the data they leave behind. The projects below are a mix of UX research, data analysis, and sports media.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Boulder, Colorado</dd></div>
+          <div><dt>Focus</dt><dd>UX/UI design, data analysis, sports media</dd></div>
+          <div><dt>Tools</dt><dd>Python, pandas, SQL, Altair, Power BI, Excel</dd></div>
+          <div><dt>Broadcast</dt><dd>SkyCam utility operator, NFL (2025–26) · Camera operator, ESPN+ (2026)</dd></div>
+          <div><dt>Leadership</dt><dd>President &amp; Treasurer, CU Snowboarding Team: 120+ members, $45K annual budget</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="slate"><span class="dot"></span>Selected work</p>
+        <h2>Five projects</h2>
+        <p class="muted">UX research, data analysis, data visualization, and a sports feature. Each page walks through the problem, my process, and what came out of it, with the full project documents attached.</p>
+      </div>
+
+      <div class="projects">
+        <a class="project" href="projects/strava-simplified.html">
+          <div class="info">
+            <span class="num">UX/UI Design · Solo · In progress</span>
+            <h3>Strava Simplified</h3>
+            <p class="muted">A redesign of the Strava app that cuts interface clutter so new and longtime athletes can get to what they use most.</p>
+            <ul class="tags"><li>User research</li><li>Surveys</li><li>Competitive analysis</li></ul>
+            <span class="go">View project →</span>
+          </div>
+          <div class="thumb type">
+            <span class="badge">Survey finding</span>
+            <span class="big">6.8<small> / 10</small></span>
+            <span class="cap">Average user satisfaction with the current app</span>
+          </div>
+        </a>
+
+        <a class="project" href="projects/nfl-draft-trajectories.html">
+          <div class="info">
+            <span class="num">Data Analysis · Solo</span>
+            <h3>NFL Draft Career Trajectories</h3>
+            <p class="muted">Does draft round predict how fast a skill player develops, not just how much they produce? Tracking the first five seasons of every RB, WR, and TE drafted since 2018.</p>
+            <ul class="tags"><li>Python</li><li>SQLite</li><li>pandas</li><li>matplotlib</li></ul>
+            <span class="go">View project →</span>
+          </div>
+          <div class="thumb contain"><img src="assets/img/nfl-chart-2.png" alt="Line chart of average receiving yards by career year for draft rounds 1 through 4" loading="lazy"></div>
+        </a>
+
+        <a class="project" href="projects/nba-team-dashboard.html">
+          <div class="info">
+            <span class="num">Dashboard · Solo</span>
+            <h3>NBA Team Stats Dashboard</h3>
+            <p class="muted">A three-page interactive Power BI dashboard built on roughly 146,000 rows of NBA game data, covering team records, scoring, and three-point trends.</p>
+            <ul class="tags"><li>Power BI</li><li>Power Query</li><li>DAX</li></ul>
+            <span class="go">View project →</span>
+          </div>
+          <div class="thumb"><img src="assets/img/nba-page-1.jpg" alt="NBA Team Performance dashboard page with wins, scoring, and home versus away charts" loading="lazy"></div>
+        </a>
+
+        <a class="project" href="projects/colorado-homicide-data-viz.html">
+          <div class="info">
+            <span class="num">Data Visualization · Group of 4</span>
+            <h3>Same Data, Two Stories</h3>
+            <p class="muted">Truthful and deliberately misleading charts built from the same Colorado homicide records. I designed the "December spike" chart.</p>
+            <ul class="tags"><li>Python</li><li>Altair</li><li>User testing</li></ul>
+            <span class="go">View project →</span>
+          </div>
+          <div class="thumb contain"><img src="assets/img/viz-december.png" alt="Bar chart titled Colorado Murders Spike Every December, with a y-axis starting at 400" loading="lazy"></div>
+        </a>
+
+        <a class="project" href="projects/maddie-shoup-feature.html">
+          <div class="info">
+            <span class="num">Sports Media · Team · Editor</span>
+            <h3>Maddie Shoup Feature</h3>
+            <p class="muted">A short broadcast feature profiling athlete Maddie Shoup, made for my Sports Broadcasting class. I edited the final piece.</p>
+            <ul class="tags"><li>Video editing</li><li>Interviewing</li><li>B-roll</li></ul>
+            <span class="go">Watch the feature →</span>
+          </div>
+          <div class="thumb type">
+            <span class="badge">Video</span>
+            <span class="play" aria-hidden="true"></span>
+            <span class="big">~3:00</span>
+            <span class="cap">Broadcast feature · Sports Broadcasting</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="slate"><span class="dot"></span>Resume</p>
+        <h2>Two versions</h2>
+        <p class="muted">One for UX/UI and data roles, and one built for broadcast and production work. Pick the one that fits the role you're hiring for.</p>
+      </div>
+      <div class="resumes">
+        <article class="resume">
+          <div class="paper"><a href="assets/docs/Benjamin-Cotton-Resume.pdf" target="_blank" rel="noopener"><img src="assets/img/resume-is-1.jpg" alt="Preview of Benjamin Cotton's Information Science resume" loading="lazy"></a></div>
+          <div>
+            <p class="slate">Information Science</p>
+            <h3>UX/UI &amp; Data</h3>
+          </div>
+          <p class="muted">Projects in data analysis, dashboards, and UX research, plus leadership and work experience.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="assets/docs/Benjamin-Cotton-Resume.pdf" target="_blank" rel="noopener">View PDF</a>
+            <a class="btn" href="assets/docs/Benjamin-Cotton-Resume.pdf" download>Download</a>
+          </div>
+        </article>
+        <article class="resume">
+          <div class="paper"><a href="assets/docs/Benjamin-Cotton-Resume-Sports-Media.pdf" target="_blank" rel="noopener"><img src="assets/img/resume-sports-1.jpg" alt="Preview of Benjamin Cotton's sports media resume" loading="lazy"></a></div>
+          <div>
+            <p class="slate">Sports Media</p>
+            <h3>Broadcast &amp; Production</h3>
+          </div>
+          <p class="muted">Live NFL and ESPN+ broadcast experience, camera operation, and production workflow.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="assets/docs/Benjamin-Cotton-Resume-Sports-Media.pdf" target="_blank" rel="noopener">View PDF</a>
+            <a class="btn" href="assets/docs/Benjamin-Cotton-Resume-Sports-Media.pdf" download>Download</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="slate"><span class="dot"></span>Contact</p>
+        <h2>Let's talk</h2>
+        <p class="muted">Open to internships and roles in UX/UI design, data analysis, and sports media.</p>
+      </div>
+      <div class="contact-grid">
+        <div><p class="slate">Phone</p><a class="val" href="tel:+17202128379">(720) 212-8379</a></div>
+        <div><p class="slate">Email</p><a class="val" href="mailto:benjamin.cotton@colorado.edu">benjamin.cotton@colorado.edu</a></div>
+        <div><p class="slate">Connect</p><a class="val" href="https://www.linkedin.com/in/benjamin-g-cotton/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="slate">© 2026 Benjamin Cotton</span>
+    <a class="slate" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>

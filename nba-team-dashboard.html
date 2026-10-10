@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NBA Team Dashboard · Benjamin Cotton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="../index.html">Ben<span>.</span>Cotton</a>
+    <ul>
+      <li><a class="link" href="../index.html#about">About</a></li>
+      <li><a class="link" href="../index.html#work">Work</a></li>
+      <li><a class="link" href="../index.html#resume">Resume</a></li>
+      <li><a class="link" href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <section class="detail-hero">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:20px">
+      <a class="back" href="../index.html#work">← All projects</a>
+      <p class="slate"><span class="dot"></span>Dashboard · Power BI</p>
+      
+      <h1>NBA Team Stats Dashboard</h1>
+      <p class="lede">An interactive Power BI dashboard for exploring how NBA teams win and score, built from about 146,000 rows of game data.</p>
+      <dl class="meta"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Tools</dt><dd>Power BI, Power Query, DAX</dd></div><div><dt>Data</dt><dd>~146,000 rows of NBA game data</dd></div><div><dt>Output</dt><dd>3-page interactive dashboard</dd></div></dl>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Overview</h2></div>
+      <div>
+        <p>I built a three-page interactive dashboard in Power BI to explore NBA team performance across seasons. The dataset has roughly 146,000 rows of game data, and every page is driven by date, team, and game-type filters so a viewer can narrow it to the teams and seasons they care about.</p>
+        <div class="stats">
+          <div class="stat"><b>~146K</b><span>rows of game data</span></div>
+          <div class="stat"><b>3</b><span>dashboard pages</span></div>
+          <div class="stat"><b>4</b><span>game types: regular season, playoffs, play-in, NBA Cup</span></div>
+        </div></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Process</h2></div>
+      <div>
+        <ul class="points">
+          <li>Cleaned and modeled the data in Power Query, removing duplicate records and fixing relationship errors between tables.</li>
+          <li>Wrote DAX measures to correct aggregation logic, so averages and percentages calculate correctly under any filter.</li>
+          <li>Designed one reusable layout of slicers, KPI cards, and a chart grid, then applied it across all three pages.</li>
+        </ul></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>The dashboard</h2></div>
+      <div>
+        <div class="gallery">
+          <figure><div class="frame"><img src="../assets/img/nba-page-1.jpg" alt="Team Performance page: wins by team, average points by year, home versus away wins, and scoring margin" loading="lazy"></div>
+            <figcaption>Page 1: Team performance. Wins, home vs. away records, scoring margin, and scoring trends by year.</figcaption></figure>
+          <figure><div class="frame"><img src="../assets/img/nba-page-2.jpg" alt="Offensive Breakdown page: three-point attempts over time, field goal percentage, scoring sources, and threes made versus attempted" loading="lazy"></div>
+            <figcaption>Page 2: Offensive breakdown. Field goal efficiency, three-point volume over time, and where points come from.</figcaption></figure>
+          <figure><div class="frame"><img src="../assets/img/nba-page-3.jpg" alt="Question page: threes made and three-point percentage by team for the 2023-24 season" loading="lazy"></div>
+            <figcaption>Page 3: Which team had the best three-point shooting, and in what season?</figcaption></figure>
+        </div></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>What it showed</h2></div>
+      <div>
+        <ul class="points">
+          <li>For the five teams shown on page one, average points per game climbed from about 93 in the early 2000s to about 118 by 2025.</li>
+          <li>Three-point attempts per game rose sharply over the same stretch, which the offensive breakdown page tracks season by season.</li>
+          <li>Comparing three-point volume against efficiency pointed to the 2015 Golden State Warriors as the best blend of both. Filtered to 2023–24, the Celtics led the league in threes made and three-point percentage.</li>
+        </ul></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div><h2>Documents</h2></div>
+      <div><div class="docs"><article class="doc">
+          <header><strong>NBA Team Stats Dashboard (all 3 pages)</strong>
+            <div class="cta-row"><a class="btn" href="../assets/docs/nba-team-dashboard.pdf" target="_blank" rel="noopener">Open PDF ↗</a><a class="btn" href="../assets/docs/nba-team-dashboard.pdf" download>Download</a></div>
+          </header>
+          <iframe src="../assets/docs/nba-team-dashboard.pdf#view=FitH" title="NBA Team Stats Dashboard (all 3 pages)" loading="lazy"></iframe>
+        </article></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap next"><a href="nfl-draft-trajectories.html"><span>← Previous</span><strong>NFL Draft Trajectories</strong></a><a class="right" href="colorado-homicide-data-viz.html"><span>Next →</span><strong>Same Data, Two Stories</strong></a></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span class="slate">© 2026 Benjamin Cotton</span>
+    <a class="slate" href="../index.html#contact">Contact →</a>
+  </div>
+</footer>
+</body>
+</html>
